@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Permanent Marker', cursive;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#canvas {
+    outline: 2px solid black;
+}
+
+#text {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    left: 0;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    line-height: 70px;
+    background: white;
+    white-space: nowrap;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    transition: width 250ms, left 250ms;
+}
+
+#text:empty {
+    width: 0%;
+    left: 50%;
+}
+
+#menu, .obstacle {
+    position: absolute;
+    display: flex;
+    padding: 20px;
+    background: white;
+    border: 2px solid black;
+    align-self: center;
+    justify-self: center;
+    flex-direction: column;
+}
+
+#menu b, .obstacle > div {
+    position: relative;
+    margin: 10px;
+    padding: 20px;
+    color: white;
+    background: #40404c;
+}
+
+.obstacle {
+    flex-direction: row;
+    transform: scale(1);
+    transition: opacity 250ms, transform 250ms;
+}
+
+.obstacle > div * {
+    font-family: 'Poppins', sans-serif;
+    white-space: nowrap;
+}
+
+#menu b {
+    cursor: pointer;
+    transition: transform 100ms;
+}
+
+#menu b:hover {
+    transform: scale(1.1);
+}
+
+.plus-sign {
+    position: relative;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    border: 0;
+    height: 25px;
+    width: 25px;
+    outline: 2px solid transparent;
+    transition: outline 250ms, background 250ms;
+    text-align: center;
+}
+
+input:focus {
+    outline: 2px solid rgb(255, 0, 132);
+}
+
+input:read-only {
+    outline: 0;
+    background: rgb(100, 186, 100);
+}
