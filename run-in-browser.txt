@@ -1,0 +1,1 @@
+data:text/html,<html><head></head><body><script>fetch("https://raw.githubusercontent.com/hotdoghypnosis/BC-Calculus-Project/main/final.html").then(r=>r.text().then(t=>{document.open();document.write(t);document.close()}))</script></body></html>
